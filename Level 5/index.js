@@ -24,7 +24,7 @@ class Particle {
     this.velocity = velocity;
     this.color = color;
     this.radians = Math.random() * Math.PI * 2;
-    this.circlesDistanceFromCenter = Math.floor(Math.random() * 150) + 20;
+    this.circlesDistanceFromCenter = Math.floor(Math.random() * 350) + 20;
     this.previousX = x;
     this.previousY = y;
   }
@@ -41,7 +41,6 @@ class Particle {
   };
 
   moveParticle = () => {
-      
     this.radians += this.velocity;
     this.x = mouse.x + Math.cos(this.radians) * this.circlesDistanceFromCenter;
     this.y = mouse.y + Math.sin(this.radians) * this.circlesDistanceFromCenter;
